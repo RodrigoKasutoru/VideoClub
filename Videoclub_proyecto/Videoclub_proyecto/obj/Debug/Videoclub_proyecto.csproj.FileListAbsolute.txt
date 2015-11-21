@@ -1,0 +1,14 @@
+c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.csprojResolveAssemblyReference.cache
+c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.Form1.resources
+c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.Properties.Resources.resources
+c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.csproj.GenerateResource.Cache
+c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\Videoclub_proyecto.exe
+c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\Videoclub_proyecto.pdb
+c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\MetroFramework.Design.dll
+c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\MetroFramework.dll
+c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\MetroFramework.Fonts.dll
+c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\Transitions.dll
+c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\MetroFramework.Design.pdb
+c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\MetroFramework.Fonts.pdb
+c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.exe
+c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.pdb
