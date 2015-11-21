@@ -36,7 +36,7 @@ namespace Videoclub_proyecto
 
         private void mtb_borrar_Click(object sender, EventArgs e)
         {
-            mtb_usuario.Text = string.Empty;
+            mtb_usuario.Clear();
             mtb_password.Text = string.Empty;
             mtb_passwordVisible.Text = string.Empty;
         }

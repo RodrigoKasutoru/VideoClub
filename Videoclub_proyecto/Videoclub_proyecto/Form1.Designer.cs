@@ -31,7 +31,6 @@
             this.mtl_titulo = new MetroFramework.Controls.MetroLink();
             this.metroLink2 = new MetroFramework.Controls.MetroLink();
             this.metroLink3 = new MetroFramework.Controls.MetroLink();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.mtb_password = new MetroFramework.Controls.MetroTextBox();
             this.mtb_usuario = new MetroFramework.Controls.MetroTextBox();
             this.mtb_passwordVisible = new MetroFramework.Controls.MetroTextBox();
@@ -67,35 +66,6 @@
             this.metroLink3.TabIndex = 2;
             this.metroLink3.Text = "Password:";
             this.metroLink3.UseSelectable = true;
-            // 
-            // metroTextBox1
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(141, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(105, 81);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.Size = new System.Drawing.Size(163, 23);
-            this.metroTextBox1.TabIndex = 3;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // mtb_password
             // 
@@ -141,7 +111,7 @@
             this.mtb_usuario.CustomButton.UseSelectable = true;
             this.mtb_usuario.CustomButton.Visible = false;
             this.mtb_usuario.Lines = new string[0];
-            this.mtb_usuario.Location = new System.Drawing.Point(105, 81);
+            this.mtb_usuario.Location = new System.Drawing.Point(104, 82);
             this.mtb_usuario.MaxLength = 32767;
             this.mtb_usuario.Name = "mtb_usuario";
             this.mtb_usuario.PasswordChar = '\0';
@@ -152,7 +122,6 @@
             this.mtb_usuario.Size = new System.Drawing.Size(163, 23);
             this.mtb_usuario.TabIndex = 5;
             this.mtb_usuario.UseSelectable = true;
-            this.mtb_usuario.Visible = false;
             this.mtb_usuario.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtb_usuario.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -231,7 +200,6 @@
             this.Controls.Add(this.mtb_passwordVisible);
             this.Controls.Add(this.mtb_usuario);
             this.Controls.Add(this.mtb_password);
-            this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.metroLink3);
             this.Controls.Add(this.metroLink2);
             this.Controls.Add(this.mtl_titulo);
@@ -246,7 +214,6 @@
         private MetroFramework.Controls.MetroLink mtl_titulo;
         private MetroFramework.Controls.MetroLink metroLink2;
         private MetroFramework.Controls.MetroLink metroLink3;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroTextBox mtb_password;
         private MetroFramework.Controls.MetroTextBox mtb_usuario;
         private MetroFramework.Controls.MetroTextBox mtb_passwordVisible;

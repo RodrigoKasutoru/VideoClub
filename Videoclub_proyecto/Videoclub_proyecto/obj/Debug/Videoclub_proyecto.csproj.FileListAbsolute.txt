@@ -12,3 +12,13 @@ c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoc
 c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\MetroFramework.Fonts.pdb
 c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.exe
 c:\users\rodrigo\documents\visual studio 2015\Projects\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.pdb
+C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.exe
+C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.pdb
+C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\Videoclub_proyecto.exe
+C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\Videoclub_proyecto.pdb
+C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\MetroFramework.Design.pdb
+C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\MetroFramework.Fonts.pdb
+C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.Form1.resources
+C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.Properties.Resources.resources
+C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.csproj.GenerateResource.Cache
