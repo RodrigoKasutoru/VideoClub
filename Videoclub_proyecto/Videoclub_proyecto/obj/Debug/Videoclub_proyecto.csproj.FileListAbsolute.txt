@@ -22,3 +22,5 @@ C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\D
 C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.Form1.resources
 C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.Properties.Resources.resources
 C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.csproj.GenerateResource.Cache
+C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\ConexionBaseDeDatos.dll
+C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\ConexionBaseDeDatos.pdb

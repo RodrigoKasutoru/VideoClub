@@ -7,38 +7,84 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MetroFramework;
-
+using ConexionBaseDeDatos;
+using System.Data.SqlClient;
 
 namespace Videoclub_proyecto
 {
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
+        //Establese una instancia a la clase de conexion a la base de datos
+        Conexion con;
         public Form1()
         {
             InitializeComponent();
+            //Selecciona la base de datos VideoClub
+            con = new Conexion("VideoClub");
         }
+        //Variable que servira para ocultar el texbox de mostrar contraseña
         bool pasVidible = false;
         private void mtl_eye_Click(object sender, EventArgs e)
         {
+            // si la variable de ocultar es falsa
             if (pasVidible == false)
             {
+                //mostrara el texbox oculto y le asicnaremos el texto del texbox  password para mostrarlo ensima del texbox del password
                 mtb_passwordVisible.Visible = true;
                 mtb_passwordVisible.Text = mtb_password.Text;
                 pasVidible = true;
             }
             else
             {
+                //De lo contrario ocultara este texbox y lo limpiara
                 mtb_passwordVisible.Visible = false;
                 mtb_passwordVisible.Text = string.Empty;
                 pasVidible = false;
             }
         }
-
+        //boton que limpiara los textbox
         private void mtb_borrar_Click(object sender, EventArgs e)
         {
             mtb_usuario.Clear();
             mtb_password.Text = string.Empty;
             mtb_passwordVisible.Text = string.Empty;
+        }
+        //boton de iniciar seccion
+        private void mtb_ingresar_Click(object sender, EventArgs e)
+        {
+            //captura algun error que se produsca al momento de realizar la conexion a la base de datos
+            try
+            {
+                //Abre una nueva conexion
+                con.AbrirConexion();
+                //Obtine los datos procedientes de la consulta sql
+               SqlDataReader reader=  con.obtenerConsulta("select COUNT(usuario) from Trabajadores where usuario='" + mtb_usuario.Text + "' and password='" + mtb_password.Text + "'");
+                //Sentencia que retorna un valor booleano si hay datos por mostrar
+                if (reader.Read())
+                {
+                    //si elvalor obtenido y evaluado es uno abrira el panel del administrador
+                    if (reader[0].ToString() == "1")
+                    {
+                        MetroMessageBox.Show(this, "Usuario existente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    //de lo contrario mostrara un mensaje de error de inicio de session
+                    else if (reader[0].ToString() == "0")
+                    {
+                        MetroMessageBox.Show(this, "La cuenta ingresada no es accesible", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            //mostrara un mensaje de error al conectarse a la base de datos
+            catch (Exception)
+            {
+                MetroMessageBox.Show(this, "Problemas en la conexion a la base de datos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mtb_usuario.Clear();
+                mtb_password.Clear();
+            }
+            //cerrara la conexion a la base de datos
+            finally {
+                con.CerrarConexion();
+            }
         }
     }
 }

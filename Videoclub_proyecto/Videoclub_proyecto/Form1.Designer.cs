@@ -165,6 +165,7 @@
             this.mtb_ingresar.Text = "Ingresar";
             this.mtb_ingresar.UseSelectable = true;
             this.mtb_ingresar.UseVisualStyleBackColor = true;
+            this.mtb_ingresar.Click += new System.EventHandler(this.mtb_ingresar_Click);
             // 
             // mtb_borrar
             // 

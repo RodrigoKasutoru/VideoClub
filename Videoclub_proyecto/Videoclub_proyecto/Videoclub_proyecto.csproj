@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ConexionBaseDeDatos">
+      <HintPath>..\..\..\Visual Studio 2015\Projects\ConexionBaseDeDatos\ConexionBaseDeDatos\bin\Debug\ConexionBaseDeDatos.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin">
       <HintPath>..\..\..\..\respaldo\Librerias\MaterialSkin\MaterialSkin\MaterialSkin\bin\Debug\MaterialSkin.dll</HintPath>
     </Reference>
