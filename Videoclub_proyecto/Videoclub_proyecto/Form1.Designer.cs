@@ -95,6 +95,7 @@
             this.mtb_password.UseSelectable = true;
             this.mtb_password.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtb_password.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.mtb_password.KeyUp += new System.Windows.Forms.KeyEventHandler(this.mtb_password_KeyUp);
             // 
             // mtb_usuario
             // 
@@ -154,6 +155,7 @@
             this.mtb_passwordVisible.Visible = false;
             this.mtb_passwordVisible.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtb_passwordVisible.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.mtb_passwordVisible.KeyUp += new System.Windows.Forms.KeyEventHandler(this.mtb_passwordVisible_KeyUp);
             // 
             // mtb_ingresar
             // 

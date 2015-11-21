@@ -38,7 +38,7 @@ namespace Videoclub_proyecto
             {
                 //De lo contrario ocultara este texbox y lo limpiara
                 mtb_passwordVisible.Visible = false;
-                mtb_passwordVisible.Text = string.Empty;
+                mtb_password.Text = mtb_passwordVisible.Text;
                 pasVidible = false;
             }
         }
@@ -52,13 +52,25 @@ namespace Videoclub_proyecto
         //boton de iniciar seccion
         private void mtb_ingresar_Click(object sender, EventArgs e)
         {
+            IngresarAlSistema();
+        }
+        public void IngresarAlSistema()
+        {
             //captura algun error que se produsca al momento de realizar la conexion a la base de datos
             try
             {
                 //Abre una nueva conexion
                 con.AbrirConexion();
+                SqlDataReader reader;
                 //Obtine los datos procedientes de la consulta sql
-               SqlDataReader reader=  con.obtenerConsulta("select COUNT(usuario) from Trabajadores where usuario='" + mtb_usuario.Text + "' and password='" + mtb_password.Text + "'");
+                if (mtb_passwordVisible.Visible == false)
+                {
+                    reader = con.obtenerConsulta("select COUNT(usuario) from Trabajadores where usuario='" + mtb_usuario.Text + "' and password='" + mtb_password.Text + "'");
+                }
+                else
+                {
+                     reader = con.obtenerConsulta("select COUNT(usuario) from Trabajadores where usuario='" + mtb_usuario.Text + "' and password='" + mtb_passwordVisible.Text + "'");
+                }
                 //Sentencia que retorna un valor booleano si hay datos por mostrar
                 if (reader.Read())
                 {
@@ -82,8 +94,25 @@ namespace Videoclub_proyecto
                 mtb_password.Clear();
             }
             //cerrara la conexion a la base de datos
-            finally {
+            finally
+            {
                 con.CerrarConexion();
+            }
+        }
+
+        private void mtb_passwordVisible_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData==Keys.Enter)
+            {
+                IngresarAlSistema();
+            }
+        }
+
+        private void mtb_password_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                IngresarAlSistema();
             }
         }
     }
