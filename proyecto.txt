@@ -1,0 +1,105 @@
+use v
+/*Tabla de roles de vendedores y administradores*/
+create table Rol(
+id_rol int not null identity(1,1) primary key,
+descripcion_rol varchar(20) not null,
+)
+/*Tabla de credenciales de administradores y vendedores*/
+create table Usuario(
+Id_usuario int not null identity(1,1) primary key,
+usuario varchar(50) not null,
+password varchar(50) not null,
+fk_rol int not null,
+foreign key(fk_rol) references Rol (id_rol)
+)
+/*Tabla de informacion de los administradores */
+create table Administrador(
+Id_Administrador int not null identity(1,1) primary key,
+Nombre varchar(50) not null,
+ApellidoP varchar(50) not null,
+ApellidoM varchar(50) not null,
+Direccion varchar(50) not null,
+Telefono varchar(50),
+Celular varchar(50),
+RFC varchar(50),
+fk_usuario int not null,
+foreign key(fk_usuario) references Usuario (Id_usuario)
+)
+/*Tabla de informacion de los vendedores*/
+create table Vendedores(
+Id_vendedor int not null identity(1,1) primary key,
+Nombre varchar(50) not null,
+ApellidoP varchar(50) not null,
+ApellidoM varchar(50) not null,
+Direccion varchar(50) not null,
+Telefono varchar(50),
+Celular varchar(50),
+RFC varchar(50),
+fk_usuario int not null,
+foreign key(fk_usuario) references Usuario (Id_usuario)
+)
+/*Tabla de informacion de los miembros*/
+create table Miembros(
+Id_miembro int not null identity(1,1) primary key ,
+Nombre varchar(50) not null,
+ApellidoP varchar(50) not null,
+ApellidoM varchar(50) not null,
+Direccion varchar(50) not null,
+Telefono varchar(50) not null,
+Celular varchar(50) not null,
+
+)
+/*Tabla de informacion de las peliculas*/
+create table Peliculas(
+Id_pelicula int not null identity(1,1) primary key,
+titulo varchar(50) not null,
+genero varchar(50) not null,
+clasificacion varchar(50) not null,
+año varchar(50) not null,
+idioma varchar(50) not null,
+formato varchar(50) not null,
+reseña varchar(50) not null,
+stock int not null,
+precionRenta int,
+precioVenta int
+)
+/*Tabla de peliculas sugeridas por los miembros*/
+create table pedidos(
+id_pedido int identity(1,1) not null primary key,
+titulo varchar(100) not null,
+genero varchar(50) not null
+
+)
+/*Tabla de accesorios a vender independiente a las  peliculas*/
+create table vetados(
+Id_vetado int not null identity(1,1) primary key,
+fk_miembro int not null, 
+foreign key(fk_miembro) references Miembros (Id_miembro)
+)
+/*Tabla de alquileres de peliculas*/
+create table Alquiler(
+id_alquiler int not null identity(1,1) primary key,
+fk_pelicula int not null,
+fk_vendedor int not null,
+fk_miembro int not null,
+cantidad int not null,
+precioFinal int not null,
+fechaRenta varchar(50) not null,
+fechaEntrega varchar(50) not null,
+devuelta varchar(3) not null,
+foreign key(fk_pelicula) references Peliculas (Id_pelicula),
+foreign key(fk_vendedor) references Vendedores (Id_vendedor),
+foreign key(fk_miembro) references Miembros (Id_miembro)
+)
+/*Tabla de ventas de peliculas*/
+create table Ventas(
+Id_venta int not null identity(1,1) primary key,
+fk_pelicula int not null,
+fk_vendedor int not null,
+cantidad int not null,
+precioFinal int not null,
+fechaVenta int not null,
+foreign key(fk_pelicula) references Peliculas (Id_pelicula),
+foreign key(fk_vendedor) references Vendedores (Id_vendedor),
+
+)
