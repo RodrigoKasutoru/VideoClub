@@ -63,9 +63,89 @@ namespace Videoclub_proyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1447373000_38 {
+            get {
+                object obj = ResourceManager.GetObject("1447373000_38", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1447375564_user_group {
+            get {
+                object obj = ResourceManager.GetObject("1447375564_user-group", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1447375862_sales_performance {
+            get {
+                object obj = ResourceManager.GetObject("1447375862_sales_performance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1448149372_view_01_1_ {
             get {
                 object obj = ResourceManager.GetObject("1448149372_view-01[1]", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1448156204_free_17 {
+            get {
+                object obj = ResourceManager.GetObject("1448156204_free-17", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1448157415_joypad {
+            get {
+                object obj = ResourceManager.GetObject("1448157415_joypad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1448157892_vector_65_16 {
+            get {
+                object obj = ResourceManager.GetObject("1448157892_vector_65_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1448158458_logout {
+            get {
+                object obj = ResourceManager.GetObject("1448158458_logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1448158627_checked_checklist_notepad {
+            get {
+                object obj = ResourceManager.GetObject("1448158627_checked-checklist-notepad", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

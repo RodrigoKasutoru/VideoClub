@@ -16,6 +16,7 @@ namespace Videoclub_proyecto
     {
         //Establese una instancia a la clase de conexion a la base de datos
         Conexion con;
+       
         public Form1()
         {
             InitializeComponent();
@@ -52,10 +53,13 @@ namespace Videoclub_proyecto
         //boton de iniciar seccion
         private void mtb_ingresar_Click(object sender, EventArgs e)
         {
-            IngresarAlSistema();
+            PanelAdmin(IngresarAlSistema());
         }
-        public void IngresarAlSistema()
+        #region IniciarPanelAdministrador
+        int ban;
+        public int IngresarAlSistema()
         {
+          
             //captura algun error que se produsca al momento de realizar la conexion a la base de datos
             try
             {
@@ -77,14 +81,17 @@ namespace Videoclub_proyecto
                     //si elvalor obtenido y evaluado es uno abrira el panel del administrador
                     if (reader[0].ToString() == "1")
                     {
-                        MetroMessageBox.Show(this, "Usuario existente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        ban = 1;
                     }
                     //de lo contrario mostrara un mensaje de error de inicio de session
                     else if (reader[0].ToString() == "0")
                     {
-                        MetroMessageBox.Show(this, "La cuenta ingresada no es accesible", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroMessageBox.Show(this,"Usuario o contraseña incorrectos","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        ban = 0;
                     }
                 }
+
             }
             //mostrara un mensaje de error al conectarse a la base de datos
             catch (Exception)
@@ -98,8 +105,48 @@ namespace Videoclub_proyecto
             {
                 con.CerrarConexion();
             }
+            return ban;
+            
         }
+        
+        public void PanelAdmin(int bandera)
+        {
+            if (bandera == 1)
+            {
+                try
+                {
+                    con.AbrirConexion();
+                    SqlDataReader reader = con.obtenerConsulta("select fk_rol from Trabajadores where usuario='" + mtb_usuario.Text + "'");
+                    if (reader.Read())
+                    {
+                        if (reader[0].ToString() == "1")
+                        {
+                            PanelDeControl panel = new PanelDeControl();
+                            panel.Show();
+                        }
+                        else
+                        {
+                            PanelVendedor panel = new PanelVendedor();
+                            panel.Show();
+                        }
+                    }
+                }
+                catch (Exception)
+                {
 
+                    MetroMessageBox.Show(this, "Problemas al abrir el panel de control", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    con.CerrarConexion();
+                }
+            }
+            else
+            {
+
+            }
+        }
+        #endregion
         private void mtb_passwordVisible_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyData==Keys.Enter)
