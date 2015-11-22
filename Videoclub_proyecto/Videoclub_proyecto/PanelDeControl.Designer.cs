@@ -28,143 +28,162 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroTile7 = new MetroFramework.Controls.MetroTile();
-            this.metroTile6 = new MetroFramework.Controls.MetroTile();
-            this.metroTile5 = new MetroFramework.Controls.MetroTile();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.components = new System.ComponentModel.Container();
+            this.CerrarSeccion = new MetroFramework.Controls.MetroTile();
+            this.Alquiler = new MetroFramework.Controls.MetroTile();
+            this.Ventas = new MetroFramework.Controls.MetroTile();
+            this.Roles = new MetroFramework.Controls.MetroTile();
+            this.Accesorios = new MetroFramework.Controls.MetroTile();
+            this.Peliculas = new MetroFramework.Controls.MetroTile();
+            this.Miembros = new MetroFramework.Controls.MetroTile();
             this.Trabajadores = new MetroFramework.Controls.MetroTile();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // metroTile7
+            // CerrarSeccion
             // 
-            this.metroTile7.ActiveControl = null;
-            this.metroTile7.Location = new System.Drawing.Point(632, 212);
-            this.metroTile7.Name = "metroTile7";
-            this.metroTile7.Size = new System.Drawing.Size(230, 142);
-            this.metroTile7.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile7.TabIndex = 7;
-            this.metroTile7.Text = "cerrar sesión";
-            this.metroTile7.TileImage = global::Videoclub_proyecto.Properties.Resources._1448158458_logout;
-            this.metroTile7.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.metroTile7.UseSelectable = true;
-            this.metroTile7.UseTileImage = true;
+            this.CerrarSeccion.ActiveControl = null;
+            this.CerrarSeccion.Location = new System.Drawing.Point(847, 211);
+            this.CerrarSeccion.Name = "CerrarSeccion";
+            this.CerrarSeccion.Size = new System.Drawing.Size(143, 142);
+            this.CerrarSeccion.Style = MetroFramework.MetroColorStyle.Green;
+            this.CerrarSeccion.TabIndex = 7;
+            this.CerrarSeccion.Text = "cerrar sesión";
+            this.CerrarSeccion.TileImage = global::Videoclub_proyecto.Properties.Resources._1448158458_logout;
+            this.CerrarSeccion.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CerrarSeccion.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.CerrarSeccion.UseSelectable = true;
+            this.CerrarSeccion.UseTileImage = true;
+            this.CerrarSeccion.Click += new System.EventHandler(this.CerrarSeccion_Click);
             // 
-            // metroTile6
+            // Alquiler
             // 
-            this.metroTile6.ActiveControl = null;
-            this.metroTile6.Location = new System.Drawing.Point(681, 63);
-            this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(181, 142);
-            this.metroTile6.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile6.TabIndex = 6;
-            this.metroTile6.Text = "Alquiler";
-            this.metroTile6.TileImage = global::Videoclub_proyecto.Properties.Resources._1448158627_checked_checklist_notepad;
-            this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.metroTile6.UseSelectable = true;
-            this.metroTile6.UseTileImage = true;
+            this.Alquiler.ActiveControl = null;
+            this.Alquiler.Location = new System.Drawing.Point(726, 63);
+            this.Alquiler.Name = "Alquiler";
+            this.Alquiler.Size = new System.Drawing.Size(264, 142);
+            this.Alquiler.Style = MetroFramework.MetroColorStyle.Green;
+            this.Alquiler.TabIndex = 6;
+            this.Alquiler.Text = "Alquiler";
+            this.Alquiler.TileImage = global::Videoclub_proyecto.Properties.Resources._1448158627_checked_checklist_notepad;
+            this.Alquiler.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Alquiler.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Alquiler.UseSelectable = true;
+            this.Alquiler.UseTileImage = true;
             // 
-            // metroTile5
+            // Ventas
             // 
-            this.metroTile5.ActiveControl = null;
-            this.metroTile5.Location = new System.Drawing.Point(444, 212);
-            this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(181, 142);
-            this.metroTile5.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile5.TabIndex = 5;
-            this.metroTile5.Text = "Ventas";
-            this.metroTile5.TileImage = global::Videoclub_proyecto.Properties.Resources._1447375862_sales_performance;
-            this.metroTile5.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.metroTile5.UseSelectable = true;
-            this.metroTile5.UseTileImage = true;
+            this.Ventas.ActiveControl = null;
+            this.Ventas.Location = new System.Drawing.Point(550, 212);
+            this.Ventas.Name = "Ventas";
+            this.Ventas.Size = new System.Drawing.Size(291, 142);
+            this.Ventas.Style = MetroFramework.MetroColorStyle.Green;
+            this.Ventas.TabIndex = 5;
+            this.Ventas.Text = "Ventas";
+            this.Ventas.TileImage = global::Videoclub_proyecto.Properties.Resources._1447375862_sales_performance;
+            this.Ventas.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Ventas.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Ventas.UseSelectable = true;
+            this.Ventas.UseTileImage = true;
             // 
-            // metroTile4
+            // Roles
             // 
-            this.metroTile4.ActiveControl = null;
-            this.metroTile4.Location = new System.Drawing.Point(444, 63);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(230, 142);
-            this.metroTile4.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile4.TabIndex = 4;
-            this.metroTile4.Text = "Roles";
-            this.metroTile4.TileImage = global::Videoclub_proyecto.Properties.Resources._1448157892_vector_65_16;
-            this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.metroTile4.UseSelectable = true;
-            this.metroTile4.UseTileImage = true;
+            this.Roles.ActiveControl = null;
+            this.Roles.Location = new System.Drawing.Point(498, 64);
+            this.Roles.Name = "Roles";
+            this.Roles.Size = new System.Drawing.Size(222, 142);
+            this.Roles.Style = MetroFramework.MetroColorStyle.Green;
+            this.Roles.TabIndex = 4;
+            this.Roles.Text = "Roles";
+            this.Roles.TileImage = global::Videoclub_proyecto.Properties.Resources._1448157892_vector_65_16;
+            this.Roles.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Roles.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Roles.UseSelectable = true;
+            this.Roles.UseTileImage = true;
             // 
-            // metroTile3
+            // Accesorios
             // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(269, 211);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(168, 143);
-            this.metroTile3.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile3.TabIndex = 3;
-            this.metroTile3.Text = "Accesorios";
-            this.metroTile3.TileImage = global::Videoclub_proyecto.Properties.Resources._1448157415_joypad;
-            this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.metroTile3.UseSelectable = true;
-            this.metroTile3.UseTileImage = true;
+            this.Accesorios.ActiveControl = null;
+            this.Accesorios.Location = new System.Drawing.Point(294, 211);
+            this.Accesorios.Name = "Accesorios";
+            this.Accesorios.Size = new System.Drawing.Size(250, 143);
+            this.Accesorios.Style = MetroFramework.MetroColorStyle.Green;
+            this.Accesorios.TabIndex = 3;
+            this.Accesorios.Text = "Accesorios";
+            this.Accesorios.TileImage = global::Videoclub_proyecto.Properties.Resources._1448157415_joypad;
+            this.Accesorios.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Accesorios.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Accesorios.UseSelectable = true;
+            this.Accesorios.UseTileImage = true;
             // 
-            // metroTile2
+            // Peliculas
             // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(34, 211);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(228, 143);
-            this.metroTile2.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile2.TabIndex = 2;
-            this.metroTile2.Text = "Peliculas";
-            this.metroTile2.TileImage = global::Videoclub_proyecto.Properties.Resources._1447373000_38;
-            this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.metroTile2.UseSelectable = true;
-            this.metroTile2.UseTileImage = true;
+            this.Peliculas.ActiveControl = null;
+            this.Peliculas.Location = new System.Drawing.Point(34, 211);
+            this.Peliculas.Name = "Peliculas";
+            this.Peliculas.Size = new System.Drawing.Size(254, 143);
+            this.Peliculas.Style = MetroFramework.MetroColorStyle.Green;
+            this.Peliculas.TabIndex = 2;
+            this.Peliculas.Text = "Peliculas";
+            this.Peliculas.TileImage = global::Videoclub_proyecto.Properties.Resources._1447373000_38;
+            this.Peliculas.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Peliculas.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Peliculas.UseSelectable = true;
+            this.Peliculas.UseTileImage = true;
             // 
-            // metroTile1
+            // Miembros
             // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(194, 63);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(243, 142);
-            this.metroTile1.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile1.TabIndex = 1;
-            this.metroTile1.Text = "Miembros";
-            this.metroTile1.TileImage = global::Videoclub_proyecto.Properties.Resources._1447375564_user_group;
-            this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.UseTileImage = true;
+            this.Miembros.ActiveControl = null;
+            this.Miembros.Location = new System.Drawing.Point(251, 63);
+            this.Miembros.Name = "Miembros";
+            this.Miembros.Size = new System.Drawing.Size(241, 142);
+            this.Miembros.Style = MetroFramework.MetroColorStyle.Green;
+            this.Miembros.TabIndex = 1;
+            this.Miembros.Text = "Miembros";
+            this.Miembros.TileImage = global::Videoclub_proyecto.Properties.Resources._1447375564_user_group;
+            this.Miembros.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Miembros.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.Miembros.UseSelectable = true;
+            this.Miembros.UseTileImage = true;
             // 
             // Trabajadores
             // 
             this.Trabajadores.ActiveControl = null;
             this.Trabajadores.Location = new System.Drawing.Point(34, 63);
             this.Trabajadores.Name = "Trabajadores";
-            this.Trabajadores.Size = new System.Drawing.Size(154, 142);
+            this.Trabajadores.Size = new System.Drawing.Size(211, 142);
             this.Trabajadores.Style = MetroFramework.MetroColorStyle.Green;
             this.Trabajadores.TabIndex = 0;
             this.Trabajadores.Text = "Trabajadores";
             this.Trabajadores.TileImage = global::Videoclub_proyecto.Properties.Resources._1448156204_free_17;
             this.Trabajadores.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Trabajadores.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.Trabajadores.UseSelectable = true;
             this.Trabajadores.UseTileImage = true;
+            this.Trabajadores.Click += new System.EventHandler(this.Trabajadores_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 8000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // PanelDeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 516);
-            this.Controls.Add(this.metroTile7);
-            this.Controls.Add(this.metroTile6);
-            this.Controls.Add(this.metroTile5);
-            this.Controls.Add(this.metroTile4);
-            this.Controls.Add(this.metroTile3);
-            this.Controls.Add(this.metroTile2);
-            this.Controls.Add(this.metroTile1);
+            this.ClientSize = new System.Drawing.Size(1023, 388);
+            this.Controls.Add(this.CerrarSeccion);
+            this.Controls.Add(this.Alquiler);
+            this.Controls.Add(this.Ventas);
+            this.Controls.Add(this.Roles);
+            this.Controls.Add(this.Accesorios);
+            this.Controls.Add(this.Peliculas);
+            this.Controls.Add(this.Miembros);
             this.Controls.Add(this.Trabajadores);
             this.Name = "PanelDeControl";
             this.Style = MetroFramework.MetroColorStyle.Green;
+            this.Load += new System.EventHandler(this.PanelDeControl_Load);
             this.ResumeLayout(false);
 
         }
@@ -172,12 +191,13 @@
         #endregion
 
         private MetroFramework.Controls.MetroTile Trabajadores;
-        private MetroFramework.Controls.MetroTile metroTile1;
-        private MetroFramework.Controls.MetroTile metroTile2;
-        private MetroFramework.Controls.MetroTile metroTile3;
-        private MetroFramework.Controls.MetroTile metroTile4;
-        private MetroFramework.Controls.MetroTile metroTile5;
-        private MetroFramework.Controls.MetroTile metroTile6;
-        private MetroFramework.Controls.MetroTile metroTile7;
+        private MetroFramework.Controls.MetroTile Miembros;
+        private MetroFramework.Controls.MetroTile Peliculas;
+        private MetroFramework.Controls.MetroTile Accesorios;
+        private MetroFramework.Controls.MetroTile Roles;
+        private MetroFramework.Controls.MetroTile Ventas;
+        private MetroFramework.Controls.MetroTile Alquiler;
+        private MetroFramework.Controls.MetroTile CerrarSeccion;
+        private System.Windows.Forms.Timer timer1;
     }
 }

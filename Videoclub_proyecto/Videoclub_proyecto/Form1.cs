@@ -54,6 +54,7 @@ namespace Videoclub_proyecto
         private void mtb_ingresar_Click(object sender, EventArgs e)
         {
             PanelAdmin(IngresarAlSistema());
+            this.Visible = false;
         }
         #region IniciarPanelAdministrador
         int ban;
