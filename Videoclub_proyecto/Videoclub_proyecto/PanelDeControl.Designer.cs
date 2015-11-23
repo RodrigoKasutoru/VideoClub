@@ -286,7 +286,6 @@
             this.Controls.Add(this.Miembros);
             this.Controls.Add(this.Trabajadores);
             this.Name = "PanelDeControl";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PanelDeControl_FormClosing);
             this.Load += new System.EventHandler(this.PanelDeControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.p_User)).EndInit();
             this.ResumeLayout(false);

@@ -54,12 +54,7 @@ namespace Videoclub_proyecto
             form.Hide();
         }
 
-        private void PanelDeControl_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Form1 form = new Form1();
-            form.Show();
-        }
-  
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
             Trabajadores.TileCount = ObtenerCantidadTrabajadores();

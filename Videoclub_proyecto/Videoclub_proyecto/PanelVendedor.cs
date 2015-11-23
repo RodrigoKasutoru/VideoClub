@@ -14,7 +14,7 @@ namespace Videoclub_proyecto
     public partial class PanelVendedor : MetroFramework.Forms.MetroForm
     {
         Conexion con;
-        int Id = 34;
+        int Id;
         public PanelVendedor()
         {
             InitializeComponent();
