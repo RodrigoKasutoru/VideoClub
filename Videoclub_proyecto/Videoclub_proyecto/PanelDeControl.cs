@@ -13,14 +13,15 @@ namespace Videoclub_proyecto
 {
     public partial class PanelDeControl : MetroFramework.Forms.MetroForm
     {
+        Conexion con;
+        int cantidad;
+
         public PanelDeControl()
         {
             InitializeComponent();
             
         }
-        Conexion con;
-        int cantidad;
-
+ 
         private void PanelDeControl_Load(object sender, EventArgs e)
         {
             con = new Conexion("VideoClub");
@@ -34,14 +35,45 @@ namespace Videoclub_proyecto
                 Ventas.TileCount = obtenerVentas();
             
         }
-       public int ObtenerCantidadTrabajadores()
+  
+        private void Trabajadores_Click(object sender, EventArgs e)
         {
-            
+            P_Trabajadores t = new Videoclub_proyecto.P_Trabajadores();
+            t.Show();
+        }
+
+        private void CerrarSeccion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 form = new Form1();
+            form.Hide();
+        }
+
+        private void PanelDeControl_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
+        }
+  
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Trabajadores.TileCount = ObtenerCantidadTrabajadores();
+            Miembros.TileCount = ObtenerCantidadMiembros();
+            Roles.TileCount = ObtenerCantidadRol();
+            Alquiler.TileCount = ObtenerCantidadAlquiler();
+            Peliculas.TileCount = ObtenerCantidadPeliculas();
+            Accesorios.TileCount = ObtenerCantidadAccesorios();
+            Ventas.TileCount = obtenerVentas();
+        }
+
+        public int ObtenerCantidadTrabajadores()
+        {
+
             try
             {
                 con.AbrirConexion();
                 SqlDataReader reader = con.obtenerConsulta("select COUNT(Id_Trabajador)from Trabajadores");
-                if(reader.Read())
+                if (reader.Read())
                 {
                     cantidad = int.Parse(reader[0].ToString());
                 }
@@ -50,7 +82,7 @@ namespace Videoclub_proyecto
             catch (Exception)
             {
 
-                MetroMessageBox.Show(this,"Error al obtener datos de la base de datos","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MetroMessageBox.Show(this, "Error al obtener datos de la base de datos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -58,7 +90,7 @@ namespace Videoclub_proyecto
             }
             return cantidad;
         }
-       public int ObtenerCantidadMiembros()
+        public int ObtenerCantidadMiembros()
         {
             try
             {
@@ -214,36 +246,6 @@ namespace Videoclub_proyecto
                 con.CerrarConexion();
             }
             return cantidad;
-        }
-        private void Trabajadores_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CerrarSeccion_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Form1 form = new Form1();
-            form.Visible = true;
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            Trabajadores.TileCount = ObtenerCantidadTrabajadores();
-            Miembros.TileCount = ObtenerCantidadMiembros();
-            Roles.TileCount = ObtenerCantidadRol();
-            Alquiler.TileCount = ObtenerCantidadAlquiler();
-            Peliculas.TileCount = ObtenerCantidadPeliculas();
-            Accesorios.TileCount = ObtenerCantidadAccesorios();
-            Ventas.TileCount = obtenerVentas();
-            Trabajadores.Refresh();
-            Miembros.Refresh();
-            Roles.Refresh();
-            Alquiler.Refresh();
-            Peliculas.Refresh();
-            Accesorios.Refresh();
-            Ventas.Refresh();
-
         }
     }
 }

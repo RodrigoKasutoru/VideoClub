@@ -25,3 +25,4 @@ C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\D
 C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\ConexionBaseDeDatos.dll
 C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\ConexionBaseDeDatos.pdb
 C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.PanelDeControl.resources
+C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.P_Trabajadores.resources

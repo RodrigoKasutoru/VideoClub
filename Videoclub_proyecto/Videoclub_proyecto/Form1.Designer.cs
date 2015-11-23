@@ -207,7 +207,7 @@
             this.Controls.Add(this.metroLink2);
             this.Controls.Add(this.mtl_titulo);
             this.Name = "Form1";
-            this.Style = MetroFramework.MetroColorStyle.Green;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
 
         }

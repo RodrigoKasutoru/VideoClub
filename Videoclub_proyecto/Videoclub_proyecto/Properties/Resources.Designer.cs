@@ -73,6 +73,16 @@ namespace Videoclub_proyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1447375343_photo {
+            get {
+                object obj = ResourceManager.GetObject("1447375343_photo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1447375564_user_group {
             get {
                 object obj = ResourceManager.GetObject("1447375564_user-group", resourceCulture);

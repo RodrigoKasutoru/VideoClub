@@ -46,7 +46,7 @@
             this.CerrarSeccion.Location = new System.Drawing.Point(847, 211);
             this.CerrarSeccion.Name = "CerrarSeccion";
             this.CerrarSeccion.Size = new System.Drawing.Size(143, 142);
-            this.CerrarSeccion.Style = MetroFramework.MetroColorStyle.Green;
+            this.CerrarSeccion.Style = MetroFramework.MetroColorStyle.Blue;
             this.CerrarSeccion.TabIndex = 7;
             this.CerrarSeccion.Text = "cerrar sesión";
             this.CerrarSeccion.TileImage = global::Videoclub_proyecto.Properties.Resources._1448158458_logout;
@@ -62,7 +62,7 @@
             this.Alquiler.Location = new System.Drawing.Point(726, 63);
             this.Alquiler.Name = "Alquiler";
             this.Alquiler.Size = new System.Drawing.Size(264, 142);
-            this.Alquiler.Style = MetroFramework.MetroColorStyle.Green;
+            this.Alquiler.Style = MetroFramework.MetroColorStyle.Blue;
             this.Alquiler.TabIndex = 6;
             this.Alquiler.Text = "Alquiler";
             this.Alquiler.TileImage = global::Videoclub_proyecto.Properties.Resources._1448158627_checked_checklist_notepad;
@@ -74,10 +74,10 @@
             // Ventas
             // 
             this.Ventas.ActiveControl = null;
-            this.Ventas.Location = new System.Drawing.Point(550, 212);
+            this.Ventas.Location = new System.Drawing.Point(550, 211);
             this.Ventas.Name = "Ventas";
             this.Ventas.Size = new System.Drawing.Size(291, 142);
-            this.Ventas.Style = MetroFramework.MetroColorStyle.Green;
+            this.Ventas.Style = MetroFramework.MetroColorStyle.Blue;
             this.Ventas.TabIndex = 5;
             this.Ventas.Text = "Ventas";
             this.Ventas.TileImage = global::Videoclub_proyecto.Properties.Resources._1447375862_sales_performance;
@@ -92,7 +92,7 @@
             this.Roles.Location = new System.Drawing.Point(498, 64);
             this.Roles.Name = "Roles";
             this.Roles.Size = new System.Drawing.Size(222, 142);
-            this.Roles.Style = MetroFramework.MetroColorStyle.Green;
+            this.Roles.Style = MetroFramework.MetroColorStyle.Blue;
             this.Roles.TabIndex = 4;
             this.Roles.Text = "Roles";
             this.Roles.TileImage = global::Videoclub_proyecto.Properties.Resources._1448157892_vector_65_16;
@@ -107,7 +107,7 @@
             this.Accesorios.Location = new System.Drawing.Point(294, 211);
             this.Accesorios.Name = "Accesorios";
             this.Accesorios.Size = new System.Drawing.Size(250, 143);
-            this.Accesorios.Style = MetroFramework.MetroColorStyle.Green;
+            this.Accesorios.Style = MetroFramework.MetroColorStyle.Blue;
             this.Accesorios.TabIndex = 3;
             this.Accesorios.Text = "Accesorios";
             this.Accesorios.TileImage = global::Videoclub_proyecto.Properties.Resources._1448157415_joypad;
@@ -122,7 +122,7 @@
             this.Peliculas.Location = new System.Drawing.Point(34, 211);
             this.Peliculas.Name = "Peliculas";
             this.Peliculas.Size = new System.Drawing.Size(254, 143);
-            this.Peliculas.Style = MetroFramework.MetroColorStyle.Green;
+            this.Peliculas.Style = MetroFramework.MetroColorStyle.Blue;
             this.Peliculas.TabIndex = 2;
             this.Peliculas.Text = "Peliculas";
             this.Peliculas.TileImage = global::Videoclub_proyecto.Properties.Resources._1447373000_38;
@@ -137,7 +137,7 @@
             this.Miembros.Location = new System.Drawing.Point(251, 63);
             this.Miembros.Name = "Miembros";
             this.Miembros.Size = new System.Drawing.Size(241, 142);
-            this.Miembros.Style = MetroFramework.MetroColorStyle.Green;
+            this.Miembros.Style = MetroFramework.MetroColorStyle.Blue;
             this.Miembros.TabIndex = 1;
             this.Miembros.Text = "Miembros";
             this.Miembros.TileImage = global::Videoclub_proyecto.Properties.Resources._1447375564_user_group;
@@ -152,7 +152,7 @@
             this.Trabajadores.Location = new System.Drawing.Point(34, 63);
             this.Trabajadores.Name = "Trabajadores";
             this.Trabajadores.Size = new System.Drawing.Size(211, 142);
-            this.Trabajadores.Style = MetroFramework.MetroColorStyle.Green;
+            this.Trabajadores.Style = MetroFramework.MetroColorStyle.Blue;
             this.Trabajadores.TabIndex = 0;
             this.Trabajadores.Text = "Trabajadores";
             this.Trabajadores.TileImage = global::Videoclub_proyecto.Properties.Resources._1448156204_free_17;
@@ -165,7 +165,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 8000;
+            this.timer1.Interval = 9999;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // PanelDeControl
@@ -182,7 +182,7 @@
             this.Controls.Add(this.Miembros);
             this.Controls.Add(this.Trabajadores);
             this.Name = "PanelDeControl";
-            this.Style = MetroFramework.MetroColorStyle.Green;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PanelDeControl_FormClosing);
             this.Load += new System.EventHandler(this.PanelDeControl_Load);
             this.ResumeLayout(false);
 

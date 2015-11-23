@@ -14,17 +14,19 @@ namespace Videoclub_proyecto
 {
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
-        //Establese una instancia a la clase de conexion a la base de datos
+        
         Conexion con;
        
+        bool pasVidible = false;
+
+        
         public Form1()
         {
             InitializeComponent();
             //Selecciona la base de datos VideoClub
             con = new Conexion("VideoClub");
         }
-        //Variable que servira para ocultar el texbox de mostrar contraseña
-        bool pasVidible = false;
+       
         private void mtl_eye_Click(object sender, EventArgs e)
         {
             // si la variable de ocultar es falsa
@@ -43,24 +45,47 @@ namespace Videoclub_proyecto
                 pasVidible = false;
             }
         }
-        //boton que limpiara los textbox
+       
         private void mtb_borrar_Click(object sender, EventArgs e)
         {
             mtb_usuario.Clear();
             mtb_password.Text = string.Empty;
             mtb_passwordVisible.Text = string.Empty;
         }
-        //boton de iniciar seccion
+       
         private void mtb_ingresar_Click(object sender, EventArgs e)
         {
+            
             PanelAdmin(IngresarAlSistema());
-            this.Visible = false;
+            
         }
+
+        private void mtb_passwordVisible_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData==Keys.Enter)
+            {
+                PanelAdmin(IngresarAlSistema());
+            }
+        }
+
+        private void mtb_password_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                PanelAdmin(IngresarAlSistema());
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         #region IniciarPanelAdministrador
         int ban;
         public int IngresarAlSistema()
         {
-          
+
             //captura algun error que se produsca al momento de realizar la conexion a la base de datos
             try
             {
@@ -74,7 +99,7 @@ namespace Videoclub_proyecto
                 }
                 else
                 {
-                     reader = con.obtenerConsulta("select COUNT(usuario) from Trabajadores where usuario='" + mtb_usuario.Text + "' and password='" + mtb_passwordVisible.Text + "'");
+                    reader = con.obtenerConsulta("select COUNT(usuario) from Trabajadores where usuario='" + mtb_usuario.Text + "' and password='" + mtb_passwordVisible.Text + "'");
                 }
                 //Sentencia que retorna un valor booleano si hay datos por mostrar
                 if (reader.Read())
@@ -88,7 +113,7 @@ namespace Videoclub_proyecto
                     //de lo contrario mostrara un mensaje de error de inicio de session
                     else if (reader[0].ToString() == "0")
                     {
-                        MetroMessageBox.Show(this,"Usuario o contraseña incorrectos","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        MetroMessageBox.Show(this, "Usuario o contraseña incorrectos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         ban = 0;
                     }
                 }
@@ -107,9 +132,9 @@ namespace Videoclub_proyecto
                 con.CerrarConexion();
             }
             return ban;
-            
+
         }
-        
+
         public void PanelAdmin(int bandera)
         {
             if (bandera == 1)
@@ -124,11 +149,14 @@ namespace Videoclub_proyecto
                         {
                             PanelDeControl panel = new PanelDeControl();
                             panel.Show();
+                            this.Hide();
                         }
                         else
                         {
                             PanelVendedor panel = new PanelVendedor();
                             panel.Show();
+                            this.Hide();
+
                         }
                     }
                 }
@@ -142,26 +170,9 @@ namespace Videoclub_proyecto
                     con.CerrarConexion();
                 }
             }
-            else
-            {
 
-            }
+
         }
         #endregion
-        private void mtb_passwordVisible_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData==Keys.Enter)
-            {
-                IngresarAlSistema();
-            }
-        }
-
-        private void mtb_password_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Enter)
-            {
-                IngresarAlSistema();
-            }
-        }
     }
 }
