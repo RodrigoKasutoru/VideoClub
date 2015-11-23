@@ -26,3 +26,4 @@ C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\bin\D
 C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\bin\Debug\ConexionBaseDeDatos.pdb
 C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.PanelDeControl.resources
 C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.P_Trabajadores.resources
+C:\Users\Rodrigo\Documents\VideoClub\Videoclub_proyecto\Videoclub_proyecto\obj\Debug\Videoclub_proyecto.PanelVendedor.resources

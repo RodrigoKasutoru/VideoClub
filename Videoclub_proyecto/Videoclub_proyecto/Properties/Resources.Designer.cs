@@ -63,6 +63,26 @@ namespace Videoclub_proyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1443556794_services {
+            get {
+                object obj = ResourceManager.GetObject("1443556794_services", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1443558808_close_window {
+            get {
+                object obj = ResourceManager.GetObject("1443558808_close_window", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1447373000_38 {
             get {
                 object obj = ResourceManager.GetObject("1447373000_38", resourceCulture);
@@ -156,6 +176,16 @@ namespace Videoclub_proyecto.Properties {
         internal static System.Drawing.Bitmap _1448158627_checked_checklist_notepad {
             get {
                 object obj = ResourceManager.GetObject("1448158627_checked-checklist-notepad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1448272894_atm_cash_machine {
+            get {
+                object obj = ResourceManager.GetObject("1448272894_atm-cash-machine", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

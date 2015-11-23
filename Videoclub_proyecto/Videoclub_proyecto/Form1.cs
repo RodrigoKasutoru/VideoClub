@@ -142,18 +142,18 @@ namespace Videoclub_proyecto
                 try
                 {
                     con.AbrirConexion();
-                    SqlDataReader reader = con.obtenerConsulta("select fk_rol from Trabajadores where usuario='" + mtb_usuario.Text + "'");
+                    SqlDataReader reader = con.obtenerConsulta("select Id_trabajador,fk_rol from Trabajadores where usuario='" + mtb_usuario.Text + "'");
                     if (reader.Read())
                     {
-                        if (reader[0].ToString() == "1")
+                        if (reader[1].ToString() == "1")
                         {
-                            PanelDeControl panel = new PanelDeControl();
+                            PanelDeControl panel = new PanelDeControl(int.Parse(reader[0].ToString()));
                             panel.Show();
                             this.Hide();
                         }
                         else
                         {
-                            PanelVendedor panel = new PanelVendedor();
+                            PanelVendedor panel = new PanelVendedor(int.Parse(reader[0].ToString()));
                             panel.Show();
                             this.Hide();
 

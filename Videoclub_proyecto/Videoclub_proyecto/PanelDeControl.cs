@@ -15,20 +15,25 @@ namespace Videoclub_proyecto
     {
         Conexion con;
         int cantidad;
-
+        int Id;
         public PanelDeControl()
         {
             InitializeComponent();
             
         }
- 
+        public PanelDeControl(int id)
+        {
+            InitializeComponent();
+            Id = id;
+
+        }
+
         private void PanelDeControl_Load(object sender, EventArgs e)
         {
             con = new Conexion("VideoClub");
-            
+                ObtenerDatosLogeado();
                 Trabajadores.TileCount = ObtenerCantidadTrabajadores();
                 Miembros.TileCount = ObtenerCantidadMiembros();
-                Roles.TileCount = ObtenerCantidadRol();
                 Alquiler.TileCount = ObtenerCantidadAlquiler();
                 Peliculas.TileCount = ObtenerCantidadPeliculas();
                 Accesorios.TileCount = ObtenerCantidadAccesorios();
@@ -59,11 +64,21 @@ namespace Videoclub_proyecto
         {
             Trabajadores.TileCount = ObtenerCantidadTrabajadores();
             Miembros.TileCount = ObtenerCantidadMiembros();
-            Roles.TileCount = ObtenerCantidadRol();
             Alquiler.TileCount = ObtenerCantidadAlquiler();
             Peliculas.TileCount = ObtenerCantidadPeliculas();
             Accesorios.TileCount = ObtenerCantidadAccesorios();
             Ventas.TileCount = obtenerVentas();
+            Trabajadores.Refresh();
+            Miembros.Refresh();
+            Alquiler.Refresh();
+            Peliculas.Refresh();
+            Accesorios.Refresh();
+        }
+        private void ml_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 f = new Form1();
+            f.Show();
         }
 
         public int ObtenerCantidadTrabajadores()
@@ -246,6 +261,30 @@ namespace Videoclub_proyecto
                 con.CerrarConexion();
             }
             return cantidad;
+        }
+
+        
+        public void ObtenerDatosLogeado()
+        {
+            try
+            {
+                con.AbrirConexion();
+                SqlDataReader reder = con.obtenerConsulta("SELECT Nombre,ApellidoP,ApellidoM,foto From Trabajadores Where Id_Trabajador=" + Id);
+                while (reder.Read())
+                {
+                    p_User.ImageLocation = reder[3].ToString();
+                    ml_Nombre.Text = reder[0].ToString() + " " + reder[1].ToString() + " " + reder[2].ToString(); ;
+                }
+            }
+            catch (Exception)
+            {
+
+                MetroMessageBox.Show(this, "Error al cargar los datos del usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.CerrarConexion();
+            }
         }
     }
 }

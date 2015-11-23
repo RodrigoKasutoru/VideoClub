@@ -91,6 +91,9 @@
     <EmbeddedResource Include="PanelDeControl.resx">
       <DependentUpon>PanelDeControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PanelVendedor.resx">
+      <DependentUpon>PanelVendedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -143,6 +146,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1447375343_photo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1443558808_close_window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1443556794_services.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1448272894_atm-cash-machine.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
