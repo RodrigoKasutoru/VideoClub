@@ -48,6 +48,7 @@
             this.mtl_titulo.TabIndex = 0;
             this.mtl_titulo.Text = "Video club  UTT";
             this.mtl_titulo.UseSelectable = true;
+            this.mtl_titulo.Click += new System.EventHandler(this.mtl_titulo_Click);
             // 
             // metroLink2
             // 
@@ -208,6 +209,7 @@
             this.Controls.Add(this.mtl_titulo);
             this.Name = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }

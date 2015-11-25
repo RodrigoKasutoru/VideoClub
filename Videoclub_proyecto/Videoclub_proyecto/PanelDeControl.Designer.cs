@@ -227,6 +227,7 @@
             this.ml_config.Size = new System.Drawing.Size(45, 40);
             this.ml_config.TabIndex = 25;
             this.ml_config.UseSelectable = true;
+            this.ml_config.Click += new System.EventHandler(this.ml_config_Click);
             // 
             // ml_Close
             // 

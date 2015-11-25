@@ -112,6 +112,14 @@ fk_Trabajador int not null,
 cantidad int not null,
 precioFinal int not null,
 fechaVenta varchar(50) not null,
+imagen varchar(50),
 foreign key(fk_accesorio) references Accesorios (Id_accesorio),
 foreign key(fk_Trabajador) references Trabajadores (Id_Trabajador)
+)
+create table caja(
+Id_caja int not null identity(1,1) primary key,
+Saldo_Inicial int not null,
+saldo_Actual int not null,
+saldo_final int not null,
+dia varchar(50) not null,
 )

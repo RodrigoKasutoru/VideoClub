@@ -1,6 +1,6 @@
 ﻿namespace Videoclub_proyecto
 {
-    partial class P_Trabajadores
+    partial class RegistroTrabajadores
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.mtb_Password = new MetroFramework.Controls.MetroTextBox();
@@ -52,6 +52,7 @@
             this.metroLink5 = new MetroFramework.Controls.MetroLink();
             this.mtb_Colonia = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mtb_date = new MetroFramework.Controls.MetroDateTime();
             this.mtb_Nombre = new MetroFramework.Controls.MetroTextBox();
             this.Nombre = new MetroFramework.Controls.MetroLink();
             this.mtb_ApellidoP = new MetroFramework.Controls.MetroTextBox();
@@ -61,7 +62,6 @@
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.mtb_ApellidoM = new MetroFramework.Controls.MetroTextBox();
             this.metroLink2 = new MetroFramework.Controls.MetroLink();
-            this.md_Fecha = new System.Windows.Forms.DateTimePicker();
             this.metroLink11 = new MetroFramework.Controls.MetroLink();
             this.metroLink10 = new MetroFramework.Controls.MetroLink();
             this.metroLink13 = new MetroFramework.Controls.MetroLink();
@@ -69,7 +69,7 @@
             this.mb_Modificar = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.mb_Eliminar = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.pic_Foto = new System.Windows.Forms.PictureBox();
-            this.mb_Registrar = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
+            this.mb_registrar = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.mb_SubirFoto = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.mg_Trabajadores = new MetroFramework.Controls.MetroGrid();
@@ -96,15 +96,15 @@
             this.metroPanel1.Controls.Add(this.mb_Modificar);
             this.metroPanel1.Controls.Add(this.mb_Eliminar);
             this.metroPanel1.Controls.Add(this.pic_Foto);
-            this.metroPanel1.Controls.Add(this.mb_Registrar);
+            this.metroPanel1.Controls.Add(this.mb_registrar);
             this.metroPanel1.Controls.Add(this.mb_SubirFoto);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(3, 27);
+            this.metroPanel1.Location = new System.Drawing.Point(19, 35);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(573, 449);
-            this.metroPanel1.TabIndex = 0;
+            this.metroPanel1.TabIndex = 1;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
@@ -138,6 +138,7 @@
             this.mtb_Password.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.mtb_Password.CustomButton.UseSelectable = true;
             this.mtb_Password.CustomButton.Visible = false;
+            this.mtb_Password.Enabled = false;
             this.mtb_Password.Lines = new string[] {
         "123"};
             this.mtb_Password.Location = new System.Drawing.Point(69, 50);
@@ -442,6 +443,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.mtb_date);
             this.groupBox1.Controls.Add(this.mtb_Nombre);
             this.groupBox1.Controls.Add(this.Nombre);
             this.groupBox1.Controls.Add(this.mtb_ApellidoP);
@@ -451,7 +453,6 @@
             this.groupBox1.Controls.Add(this.metroLink1);
             this.groupBox1.Controls.Add(this.mtb_ApellidoM);
             this.groupBox1.Controls.Add(this.metroLink2);
-            this.groupBox1.Controls.Add(this.md_Fecha);
             this.groupBox1.Controls.Add(this.metroLink11);
             this.groupBox1.Controls.Add(this.metroLink10);
             this.groupBox1.Location = new System.Drawing.Point(146, 28);
@@ -460,6 +461,14 @@
             this.groupBox1.TabIndex = 67;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion personal del trabajador";
+            // 
+            // mtb_date
+            // 
+            this.mtb_date.Location = new System.Drawing.Point(130, 100);
+            this.mtb_date.MinimumSize = new System.Drawing.Size(0, 29);
+            this.mtb_date.Name = "mtb_date";
+            this.mtb_date.Size = new System.Drawing.Size(279, 29);
+            this.mtb_date.TabIndex = 67;
             // 
             // mtb_Nombre
             // 
@@ -530,7 +539,7 @@
             // 
             // mtb_Edad
             // 
-            this.mtb_Edad.Location = new System.Drawing.Point(71, 132);
+            this.mtb_Edad.Location = new System.Drawing.Point(67, 132);
             this.mtb_Edad.Name = "mtb_Edad";
             this.mtb_Edad.Size = new System.Drawing.Size(120, 20);
             this.mtb_Edad.TabIndex = 66;
@@ -550,7 +559,7 @@
             this.mtb_RFC.CustomButton.UseSelectable = true;
             this.mtb_RFC.CustomButton.Visible = false;
             this.mtb_RFC.Lines = new string[0];
-            this.mtb_RFC.Location = new System.Drawing.Point(246, 129);
+            this.mtb_RFC.Location = new System.Drawing.Point(246, 133);
             this.mtb_RFC.MaxLength = 32767;
             this.mtb_RFC.Name = "mtb_RFC";
             this.mtb_RFC.PasswordChar = '\0';
@@ -566,7 +575,7 @@
             // 
             // metroLink14
             // 
-            this.metroLink14.Location = new System.Drawing.Point(187, 129);
+            this.metroLink14.Location = new System.Drawing.Point(187, 133);
             this.metroLink14.Name = "metroLink14";
             this.metroLink14.Size = new System.Drawing.Size(74, 23);
             this.metroLink14.TabIndex = 64;
@@ -620,13 +629,6 @@
             this.metroLink2.Text = "Apellido materno:";
             this.metroLink2.UseSelectable = true;
             // 
-            // md_Fecha
-            // 
-            this.md_Fecha.Location = new System.Drawing.Point(131, 103);
-            this.md_Fecha.Name = "md_Fecha";
-            this.md_Fecha.Size = new System.Drawing.Size(278, 20);
-            this.md_Fecha.TabIndex = 56;
-            // 
             // metroLink11
             // 
             this.metroLink11.Location = new System.Drawing.Point(5, 103);
@@ -647,7 +649,7 @@
             // 
             // metroLink13
             // 
-            this.metroLink13.Location = new System.Drawing.Point(0, 3);
+            this.metroLink13.Location = new System.Drawing.Point(9, 3);
             this.metroLink13.Name = "metroLink13";
             this.metroLink13.Size = new System.Drawing.Size(212, 23);
             this.metroLink13.TabIndex = 63;
@@ -702,17 +704,17 @@
             this.pic_Foto.TabIndex = 52;
             this.pic_Foto.TabStop = false;
             // 
-            // mb_Registrar
+            // mb_registrar
             // 
-            this.mb_Registrar.Image = null;
-            this.mb_Registrar.Location = new System.Drawing.Point(467, 410);
-            this.mb_Registrar.Name = "mb_Registrar";
-            this.mb_Registrar.Size = new System.Drawing.Size(94, 23);
-            this.mb_Registrar.TabIndex = 51;
-            this.mb_Registrar.Text = "Registrar";
-            this.mb_Registrar.UseSelectable = true;
-            this.mb_Registrar.UseVisualStyleBackColor = true;
-            this.mb_Registrar.Click += new System.EventHandler(this.mb_Registrar_Click);
+            this.mb_registrar.Image = null;
+            this.mb_registrar.Location = new System.Drawing.Point(467, 410);
+            this.mb_registrar.Name = "mb_registrar";
+            this.mb_registrar.Size = new System.Drawing.Size(94, 23);
+            this.mb_registrar.TabIndex = 51;
+            this.mb_registrar.Text = "Registrar";
+            this.mb_registrar.UseSelectable = true;
+            this.mb_registrar.UseVisualStyleBackColor = true;
+            this.mb_registrar.Click += new System.EventHandler(this.mb_registrar_Click);
             // 
             // mb_SubirFoto
             // 
@@ -732,10 +734,10 @@
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(582, 27);
+            this.metroPanel2.Location = new System.Drawing.Point(598, 35);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(471, 449);
-            this.metroPanel2.TabIndex = 1;
+            this.metroPanel2.Size = new System.Drawing.Size(460, 449);
+            this.metroPanel2.TabIndex = 2;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
@@ -747,23 +749,23 @@
             this.mg_Trabajadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mg_Trabajadores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.mg_Trabajadores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.mg_Trabajadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.mg_Trabajadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.mg_Trabajadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.mg_Trabajadores.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.mg_Trabajadores.DefaultCellStyle = dataGridViewCellStyle5;
             this.mg_Trabajadores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mg_Trabajadores.EnableHeadersVisualStyles = false;
             this.mg_Trabajadores.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -772,17 +774,17 @@
             this.mg_Trabajadores.Name = "mg_Trabajadores";
             this.mg_Trabajadores.ReadOnly = true;
             this.mg_Trabajadores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.mg_Trabajadores.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.mg_Trabajadores.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.mg_Trabajadores.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.mg_Trabajadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.mg_Trabajadores.Size = new System.Drawing.Size(471, 449);
+            this.mg_Trabajadores.Size = new System.Drawing.Size(460, 449);
             this.mg_Trabajadores.TabIndex = 2;
             this.mg_Trabajadores.SelectionChanged += new System.EventHandler(this.mg_Trabajadores_SelectionChanged);
             // 
@@ -790,15 +792,15 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // P_Trabajadores
+            // RegistroTrabajadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 486);
+            this.ClientSize = new System.Drawing.Size(1078, 495);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
-            this.Name = "P_Trabajadores";
-            this.Load += new System.EventHandler(this.Trabajadores_Load);
+            this.Name = "RegistroTrabajadores";
+            this.Load += new System.EventHandler(this.RegistroTrabajadores_Load);
             this.metroPanel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -815,47 +817,47 @@
         #endregion
 
         private MetroFramework.Controls.MetroPanel metroPanel1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private MetroFramework.Controls.MetroTextBox mtb_Password;
+        private MetroFramework.Controls.MetroLink metroLink9;
+        private MetroFramework.Controls.MetroComboBox mb_Rol;
+        private MetroFramework.Controls.MetroLink metroLink12;
+        private MetroFramework.Controls.MetroTextBox mtb_Usuario;
+        private MetroFramework.Controls.MetroLink metroLink8;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private MetroFramework.Controls.MetroTextBox mtb_Celular;
+        private MetroFramework.Controls.MetroTextBox mtb_Telefono;
+        private MetroFramework.Controls.MetroLink metroLink7;
+        private MetroFramework.Controls.MetroLink metroLink6;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private MetroFramework.Controls.MetroTextBox mtb_Direccion;
+        private MetroFramework.Controls.MetroLink metroLink3;
+        private MetroFramework.Controls.MetroTextBox mtb_CodigoP;
+        private MetroFramework.Controls.MetroLink metroLink4;
+        private MetroFramework.Controls.MetroLink metroLink5;
+        private MetroFramework.Controls.MetroTextBox mtb_Colonia;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private MetroFramework.Controls.MetroTextBox mtb_Nombre;
+        private MetroFramework.Controls.MetroLink Nombre;
+        private MetroFramework.Controls.MetroTextBox mtb_ApellidoP;
+        private System.Windows.Forms.NumericUpDown mtb_Edad;
+        private MetroFramework.Controls.MetroTextBox mtb_RFC;
+        private MetroFramework.Controls.MetroLink metroLink14;
+        private MetroFramework.Controls.MetroLink metroLink1;
+        private MetroFramework.Controls.MetroTextBox mtb_ApellidoM;
+        private MetroFramework.Controls.MetroLink metroLink2;
+        private MetroFramework.Controls.MetroLink metroLink11;
+        private MetroFramework.Controls.MetroLink metroLink10;
+        private MetroFramework.Controls.MetroLink metroLink13;
         private MetroFramework.Controls.MetroTextBox.MetroTextButton mb_Limpiar;
         private MetroFramework.Controls.MetroTextBox.MetroTextButton mb_Modificar;
         private MetroFramework.Controls.MetroTextBox.MetroTextButton mb_Eliminar;
-        private MetroFramework.Controls.MetroComboBox mb_Rol;
-        private MetroFramework.Controls.MetroLink metroLink12;
-        private System.Windows.Forms.DateTimePicker md_Fecha;
-        private MetroFramework.Controls.MetroLink metroLink11;
-        private MetroFramework.Controls.MetroLink metroLink10;
         private System.Windows.Forms.PictureBox pic_Foto;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton mb_Registrar;
+        private MetroFramework.Controls.MetroTextBox.MetroTextButton mb_registrar;
         private MetroFramework.Controls.MetroTextBox.MetroTextButton mb_SubirFoto;
-        private MetroFramework.Controls.MetroTextBox mtb_Password;
-        private MetroFramework.Controls.MetroTextBox mtb_Usuario;
-        private MetroFramework.Controls.MetroTextBox mtb_Celular;
-        private MetroFramework.Controls.MetroTextBox mtb_Telefono;
-        private MetroFramework.Controls.MetroTextBox mtb_CodigoP;
-        private MetroFramework.Controls.MetroTextBox mtb_Colonia;
-        private MetroFramework.Controls.MetroTextBox mtb_Direccion;
-        private MetroFramework.Controls.MetroTextBox mtb_ApellidoM;
-        private MetroFramework.Controls.MetroTextBox mtb_ApellidoP;
-        private MetroFramework.Controls.MetroTextBox mtb_Nombre;
-        private MetroFramework.Controls.MetroLink metroLink9;
-        private MetroFramework.Controls.MetroLink metroLink8;
-        private MetroFramework.Controls.MetroLink metroLink7;
-        private MetroFramework.Controls.MetroLink metroLink6;
-        private MetroFramework.Controls.MetroLink metroLink5;
-        private MetroFramework.Controls.MetroLink metroLink4;
-        private MetroFramework.Controls.MetroLink metroLink3;
-        private MetroFramework.Controls.MetroLink metroLink2;
-        private MetroFramework.Controls.MetroLink metroLink1;
-        private MetroFramework.Controls.MetroLink Nombre;
+        private MetroFramework.Controls.MetroDateTime mtb_date;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroGrid mg_Trabajadores;
-        private MetroFramework.Controls.MetroLink metroLink13;
-        private MetroFramework.Controls.MetroTextBox mtb_RFC;
-        private MetroFramework.Controls.MetroLink metroLink14;
-        private System.Windows.Forms.NumericUpDown mtb_Edad;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

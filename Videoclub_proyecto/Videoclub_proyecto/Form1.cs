@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MetroFramework;
-using ConexionBaseDeDatos;
 using System.Data.SqlClient;
 
 namespace Videoclub_proyecto
@@ -24,7 +23,7 @@ namespace Videoclub_proyecto
         {
             InitializeComponent();
             //Selecciona la base de datos VideoClub
-            con = new Conexion("VideoClub");
+            con = new Conexion("Data Source = DESKTOP-5QTHLQM\\CASTOR;" + "Initial Catalog = VideoClub ; Integrated Security = true;");
         }
        
         private void mtl_eye_Click(object sender, EventArgs e)
@@ -174,5 +173,15 @@ namespace Videoclub_proyecto
 
         }
         #endregion
+
+        private void mtl_titulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

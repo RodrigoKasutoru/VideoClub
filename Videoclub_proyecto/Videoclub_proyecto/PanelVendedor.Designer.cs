@@ -28,6 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.metroLink3 = new MetroFramework.Controls.MetroLink();
+            this.ml_Nombre = new MetroFramework.Controls.MetroLink();
+            this.metroLink5 = new MetroFramework.Controls.MetroLink();
+            this.metroLink6 = new MetroFramework.Controls.MetroLink();
+            this.ml_sa = new MetroFramework.Controls.MetroLink();
+            this.ml_SAP = new MetroFramework.Controls.MetroLink();
             this.ml_config = new MetroFramework.Controls.MetroLink();
             this.ml_Close = new MetroFramework.Controls.MetroLink();
             this.p_User = new System.Windows.Forms.PictureBox();
@@ -35,14 +42,65 @@
             this.Ventas = new MetroFramework.Controls.MetroTile();
             this.Accesorios = new MetroFramework.Controls.MetroTile();
             this.Peliculas = new MetroFramework.Controls.MetroTile();
-            this.metroLink3 = new MetroFramework.Controls.MetroLink();
-            this.ml_Nombre = new MetroFramework.Controls.MetroLink();
-            this.metroLink5 = new MetroFramework.Controls.MetroLink();
-            this.metroLink6 = new MetroFramework.Controls.MetroLink();
-            this.ml_sa = new MetroFramework.Controls.MetroLink();
-            this.ml_SAP = new MetroFramework.Controls.MetroLink();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.p_User)).BeginInit();
             this.SuspendLayout();
+            // 
+            // metroLink3
+            // 
+            this.metroLink3.Location = new System.Drawing.Point(110, 27);
+            this.metroLink3.Name = "metroLink3";
+            this.metroLink3.Size = new System.Drawing.Size(64, 23);
+            this.metroLink3.TabIndex = 17;
+            this.metroLink3.Text = "Vendedor:";
+            this.metroLink3.UseSelectable = true;
+            // 
+            // ml_Nombre
+            // 
+            this.ml_Nombre.Location = new System.Drawing.Point(110, 51);
+            this.ml_Nombre.Name = "ml_Nombre";
+            this.ml_Nombre.Size = new System.Drawing.Size(383, 23);
+            this.ml_Nombre.TabIndex = 18;
+            this.ml_Nombre.Text = "Nombre:";
+            this.ml_Nombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ml_Nombre.UseSelectable = true;
+            this.ml_Nombre.Click += new System.EventHandler(this.ml_Nombre_Click);
+            // 
+            // metroLink5
+            // 
+            this.metroLink5.Location = new System.Drawing.Point(165, 10);
+            this.metroLink5.Name = "metroLink5";
+            this.metroLink5.Size = new System.Drawing.Size(115, 23);
+            this.metroLink5.TabIndex = 19;
+            this.metroLink5.Text = "Saldo de apertura:";
+            this.metroLink5.UseSelectable = true;
+            // 
+            // metroLink6
+            // 
+            this.metroLink6.Location = new System.Drawing.Point(363, 10);
+            this.metroLink6.Name = "metroLink6";
+            this.metroLink6.Size = new System.Drawing.Size(115, 23);
+            this.metroLink6.TabIndex = 20;
+            this.metroLink6.Text = "Saldo actual:";
+            this.metroLink6.UseSelectable = true;
+            // 
+            // ml_sa
+            // 
+            this.ml_sa.Location = new System.Drawing.Point(474, 10);
+            this.ml_sa.Name = "ml_sa";
+            this.ml_sa.Size = new System.Drawing.Size(99, 23);
+            this.ml_sa.TabIndex = 21;
+            this.ml_sa.Text = "0";
+            this.ml_sa.UseSelectable = true;
+            // 
+            // ml_SAP
+            // 
+            this.ml_SAP.Location = new System.Drawing.Point(286, 10);
+            this.ml_SAP.Name = "ml_SAP";
+            this.ml_SAP.Size = new System.Drawing.Size(85, 23);
+            this.ml_SAP.TabIndex = 22;
+            this.ml_SAP.Text = "0";
+            this.ml_SAP.UseSelectable = true;
             // 
             // ml_config
             // 
@@ -53,6 +111,7 @@
             this.ml_config.Size = new System.Drawing.Size(45, 40);
             this.ml_config.TabIndex = 16;
             this.ml_config.UseSelectable = true;
+            this.ml_config.Click += new System.EventHandler(this.ml_config_Click);
             // 
             // ml_Close
             // 
@@ -135,60 +194,11 @@
             this.Peliculas.UseSelectable = true;
             this.Peliculas.UseTileImage = true;
             // 
-            // metroLink3
+            // timer1
             // 
-            this.metroLink3.Location = new System.Drawing.Point(110, 27);
-            this.metroLink3.Name = "metroLink3";
-            this.metroLink3.Size = new System.Drawing.Size(64, 23);
-            this.metroLink3.TabIndex = 17;
-            this.metroLink3.Text = "Vendedor:";
-            this.metroLink3.UseSelectable = true;
-            // 
-            // ml_Nombre
-            // 
-            this.ml_Nombre.Location = new System.Drawing.Point(110, 51);
-            this.ml_Nombre.Name = "ml_Nombre";
-            this.ml_Nombre.Size = new System.Drawing.Size(383, 23);
-            this.ml_Nombre.TabIndex = 18;
-            this.ml_Nombre.Text = "Nombre:";
-            this.ml_Nombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ml_Nombre.UseSelectable = true;
-            // 
-            // metroLink5
-            // 
-            this.metroLink5.Location = new System.Drawing.Point(165, 10);
-            this.metroLink5.Name = "metroLink5";
-            this.metroLink5.Size = new System.Drawing.Size(115, 23);
-            this.metroLink5.TabIndex = 19;
-            this.metroLink5.Text = "Saldo de apertura:";
-            this.metroLink5.UseSelectable = true;
-            // 
-            // metroLink6
-            // 
-            this.metroLink6.Location = new System.Drawing.Point(363, 10);
-            this.metroLink6.Name = "metroLink6";
-            this.metroLink6.Size = new System.Drawing.Size(115, 23);
-            this.metroLink6.TabIndex = 20;
-            this.metroLink6.Text = "Saldo actual:";
-            this.metroLink6.UseSelectable = true;
-            // 
-            // ml_sa
-            // 
-            this.ml_sa.Location = new System.Drawing.Point(474, 10);
-            this.ml_sa.Name = "ml_sa";
-            this.ml_sa.Size = new System.Drawing.Size(99, 23);
-            this.ml_sa.TabIndex = 21;
-            this.ml_sa.Text = "0";
-            this.ml_sa.UseSelectable = true;
-            // 
-            // ml_SAP
-            // 
-            this.ml_SAP.Location = new System.Drawing.Point(286, 10);
-            this.ml_SAP.Name = "ml_SAP";
-            this.ml_SAP.Size = new System.Drawing.Size(85, 23);
-            this.ml_SAP.TabIndex = 22;
-            this.ml_SAP.Text = "0";
-            this.ml_SAP.UseSelectable = true;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 9999;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // PanelVendedor
             // 
@@ -230,5 +240,6 @@
         private MetroFramework.Controls.MetroLink metroLink6;
         private MetroFramework.Controls.MetroLink ml_sa;
         private MetroFramework.Controls.MetroLink ml_SAP;
+        private System.Windows.Forms.Timer timer1;
     }
 }
